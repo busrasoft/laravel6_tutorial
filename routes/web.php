@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('pizza','PizzaController@index')->name('pizzaGet');
+Route::get('customer','CustomerController@index');
