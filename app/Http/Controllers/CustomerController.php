@@ -26,15 +26,28 @@ class CustomerController extends Controller
         //     'ContactName' => 'Contact busra',
         // ]);
 
-        $customer = Customer::firstOrNew([   //bu metod eger kayit varsa aynisini olusturmaz, kayidetmez
-            'ContactTitle' => 'Contact bir',
-            'ContactName' => 'Contact busra',
-        ]);
-        if($customer->save()){
-        echo 'var';
-             }
+        // $customer = Customer::firstOrNew([   //bu metod eger kayit varsa aynisini olusturmaz, kayidetmez
+        //     'ContactTitle' => 'Contact bir',
+        //     'ContactName' => 'Contact busra',
+        // ]);
+        // if($customer->save()){
+        // echo 'var';
+        //      }
        
-        return 'basarili';
+        // return 'basarili';
 
+        // $customer =Customer :: find(1); //id si 1 olan datayi update eder
+        // $customer -> ContactTitle ='calm down';
+        // $customer -> ContactName ='care';
+        // if($customer->save()){
+        //         return 'basarili';
+        //     }
+
+        // $customer =Customer :: where('id',1)->update([ //id si 1 olan datayi update eder
+        //     'ContactTitle' => 'couch',
+        //     'ContactName' => 'couch',
+        // ]);
+
+        
     }
 }

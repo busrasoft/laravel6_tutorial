@@ -8,15 +8,15 @@ use App\Pizza;
 class PizzaController extends Controller
 {
     public function index(){
-       // $pizza=Pizza::all();
-      //  $pizza=Pizza::where('mushroom',1)->get();
-      //  $pizza=Pizza::where('mushroom',1)->first();
+       // $pizza=Pizza::all(); //modelden veri cekildi
+      //  $pizza=Pizza::where('mushroom',1)->get(); //birdern fazla satirla kullanim 
+      //  $pizza=Pizza::where('mushroom',1)->first(); //tek satir donuyorsa first kullanilir
      //   dd($pizza);
     // foreach ($pizza as $key) {
     //     return $key['mushroom'];
     // }
 
-    $pizza= new Pizza;
+    $pizza= new Pizza; //
     $pizza->mushroom ='mantar';
     $pizza->parsley ='maydanoz';
     $pizza->lettuce = 'marul';
