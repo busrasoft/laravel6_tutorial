@@ -66,10 +66,20 @@ class CustomerController extends Controller
             // }
 
             //SoftDeletes ile hepsini gosterme
-            $work = Work::withTrashed()->get();
+            // $work = Work::withTrashed()->get();
+            // foreach($work as $key)
+            // {
+            //  echo $key -> work_must."<br>";
+            // }
+    
+            //sadece SoftDeletes ile silinenleri gosterme
+            $work = Work::onlyTrashed()->get();
             foreach($work as $key)
             {
              echo $key -> work_must."<br>";
             }
-    }
+    
+    
+    
+        }
 }
