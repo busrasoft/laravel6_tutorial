@@ -80,9 +80,10 @@ class CustomerController extends Controller
             // }
     
             //SoftDeletes silinenleri geri getirme
-            $work = Work::withTrashed()->restore();
+           // $work = Work::withTrashed()->restore();
            
-    
+//datayi tamamen silme
+           Work :: withTrashed()->where('id',9)->forceDelete(); 
     
         }
 }
