@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Customer;
 use App\Pizza;
+use App\Work;
 
 class CustomerController extends Controller
 {
@@ -55,7 +56,13 @@ class CustomerController extends Controller
     
          //   Customer :: destroy(3);  //id 3 olan datayi sildik
 
-           
+        //  Work :: where('id',2)->delete(); //softdelete metodu kullanildi veri frontendten silindi ama veritabaninda hala mevcut.
+        
+            $work = Work::all();
+            foreach($work as $key)
+            {
+             echo $key -> work_must."<br>";
+            }
 
     }
 }
