@@ -48,6 +48,10 @@ class CustomerController extends Controller
         //     'ContactName' => 'couch',
         // ]);
 
-        
+        // $customer =Customer :: find(5); //id 5 olan datayi sildik
+        // $customer -> delete();
+
+        $customer =Customer :: where('id',4) -> delete(); //id 4 olan datayi sildik
+    
     }
 }
