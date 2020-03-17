@@ -58,11 +58,18 @@ class CustomerController extends Controller
 
         //  Work :: where('id',2)->delete(); //softdelete metodu kullanildi veri frontendten silindi ama veritabaninda hala mevcut.
         
-            $work = Work::all();
+        //SoftDeletes
+            // $work = Work::all();
+            // foreach($work as $key)
+            // {
+            //  echo $key -> work_must."<br>";
+            // }
+
+            //SoftDeletes ile hepsini gosterme
+            $work = Work::withTrashed()->get();
             foreach($work as $key)
             {
              echo $key -> work_must."<br>";
             }
-
     }
 }
